@@ -1,5 +1,12 @@
 const myLibrary = [];
 
+const card1 = document.querySelector(".card1");
+const card2 = document.querySelector(".card2");
+const card3 = document.querySelector(".card3");
+const card4 = document.querySelector(".card4");
+const card5 = document.querySelector(".card5");
+
+
 const book1 = new Book("Zero To One", "Peter Thiel", "295", "Read");
 myLibrary.push(book1);
 const book2 = new Book("Never Split The Difference", "Chris Voss", "300", "Read");
@@ -9,6 +16,7 @@ myLibrary.push(book3);
 const book4 = new Book("Can't Hurt Me", "David Goggins", "305", "Read");
 myLibrary.push(book4);
 
+// card1.textContent = "Book: " + book1.info();
 
 function Book(title, author, numberOfPages, read) {
     this.title = title;
