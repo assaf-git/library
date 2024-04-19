@@ -1,5 +1,15 @@
 const myLibrary = [];
 
+const book1 = new Book("Zero To One", "Peter Thiel", "295", "Read");
+myLibrary.push(book1);
+const book2 = new Book("Never Split The Difference", "Chris Voss", "300", "Read");
+myLibrary.push(book2);
+const book3 = new Book("This Is Marketing", "Seth Godin", "350", "Not yet read");
+myLibrary.push(book3);
+const book4 = new Book("Can't Hurt Me", "David Goggins", "305", "Read");
+myLibrary.push(book4);
+
+
 function Book(title, author, numberOfPages, read) {
     this.title = title;
     this.author = author;
@@ -31,6 +41,3 @@ console.log(myLibrary);
 // } else {
 //     read = 'Not yet read';
 // }
-
-// const book1 = new Book('The Hobbit', 'JRR Tolkien', '295 pages', read);
-// console.log(book1.info());
