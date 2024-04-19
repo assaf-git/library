@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+}
+
+.container {
+    height: 700px;
+    padding: 10px;
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.card {
+    border: 1px solid black;
+    border-radius: 4px;
+}
