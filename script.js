@@ -34,6 +34,10 @@ addBookToLibrary();
 
 console.log(myLibrary);
 
+myLibrary.forEach(function(prop){
+    console.log(prop);
+});
+
 
 // let answer = prompt("Have you read this book?", "Yes");
 // if (answer == "Yes") {
