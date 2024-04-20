@@ -1,10 +1,14 @@
 const myLibrary = [];
 
-const card1 = document.querySelector(".card1");
-const card2 = document.querySelector(".card2");
-const card3 = document.querySelector(".card3");
-const card4 = document.querySelector(".card4");
-const card5 = document.querySelector(".card5");
+// let card = {};
+// const card1 = document.querySelector(".card1");
+// const card2 = document.querySelector(".card2");
+// const card3 = document.querySelector(".card3");
+// const card4 = document.querySelector(".card4");
+// const card5 = document.querySelector(".card5");
+
+const nodeList = document.querySelectorAll(".card");
+const myCards = Array.from(nodeList);
 
 
 const book1 = new Book("Zero To One", "Peter Thiel", "295", "Read");
@@ -16,7 +20,20 @@ myLibrary.push(book3);
 const book4 = new Book("Can't Hurt Me", "David Goggins", "305", "Read");
 myLibrary.push(book4);
 
-// card1.textContent = "Book: " + book1.info();
+// card.forEach(function(newCard) {
+//     card.push(newCard);
+//     console.log(newCard);
+//     newCard.textContent = "Book: " + myLibrary[0].info();
+// })
+// card1.textContent = "Book: " + myLibrary[0].info();
+// card2.textContent = "Book: " + myLibrary[1].info();
+// card3.textContent = "Book: " + myLibrary[2].info();
+// card4.textContent = "Book: " + myLibrary[3].info();
+// card5.textContent = "Book: " + book5.info();
+
+// card.push(card1);
+// console.log(card);
+
 
 function Book(title, author, numberOfPages, read) {
     this.title = title;
@@ -27,6 +44,8 @@ function Book(title, author, numberOfPages, read) {
         return title + ', ' + author + ', ' + numberOfPages + ', ' + read;
     }    
 }
+
+
 
 function addBookToLibrary() {
     let title = prompt("Title: ");
@@ -42,8 +61,14 @@ addBookToLibrary();
 
 console.log(myLibrary);
 
-myLibrary.forEach(function(prop){
-    console.log(prop);
+myLibrary.forEach(function(book){
+    console.log(book.info());
+
+    // let i = 1;
+    // card[i].textContent = "Book: " + book.info();
+    // do {
+
+    // }
 });
 
 
