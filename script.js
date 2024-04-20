@@ -1,11 +1,5 @@
 const myLibrary = [];
 
-// let card = {};
-// const card1 = document.querySelector(".card1");
-// const card2 = document.querySelector(".card2");
-// const card3 = document.querySelector(".card3");
-// const card4 = document.querySelector(".card4");
-// const card5 = document.querySelector(".card5");
 
 const nodeList = document.querySelectorAll(".card");
 const myCards = Array.from(nodeList);
@@ -20,20 +14,6 @@ myLibrary.push(book3);
 const book4 = new Book("Can't Hurt Me", "David Goggins", "305", "Read");
 myLibrary.push(book4);
 
-// card.forEach(function(newCard) {
-//     card.push(newCard);
-//     console.log(newCard);
-//     newCard.textContent = "Book: " + myLibrary[0].info();
-// })
-// card1.textContent = "Book: " + myLibrary[0].info();
-// card2.textContent = "Book: " + myLibrary[1].info();
-// card3.textContent = "Book: " + myLibrary[2].info();
-// card4.textContent = "Book: " + myLibrary[3].info();
-// card5.textContent = "Book: " + book5.info();
-
-// card.push(card1);
-// console.log(card);
-
 
 function Book(title, author, numberOfPages, read) {
     this.title = title;
@@ -45,7 +25,14 @@ function Book(title, author, numberOfPages, read) {
     }    
 }
 
-
+function displayBooks() {
+    for (i = 0; i < myLibrary.length; i++) {
+        // card[i].textContent = "Book: " + myLibrary[i-1].info();
+        console.log(myLibrary[i].info());
+        myCards[i].textContent = "Book: " + myLibrary[i].info();
+    }
+}
+displayBooks();
 
 function addBookToLibrary() {
     let title = prompt("Title: ");
@@ -56,7 +43,6 @@ function addBookToLibrary() {
     console.log(newBook.info());
     myLibrary.push(newBook);
 }
-
 addBookToLibrary();
 
 console.log(myLibrary);
