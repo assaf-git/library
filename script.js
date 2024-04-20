@@ -25,14 +25,6 @@ function Book(title, author, numberOfPages, read) {
     }    
 }
 
-function displayBooks() {
-    for (i = 0; i < myLibrary.length; i++) {
-        // card[i].textContent = "Book: " + myLibrary[i-1].info();
-        console.log(myLibrary[i].info());
-        myCards[i].textContent = "Book: " + myLibrary[i].info();
-    }
-}
-displayBooks();
 
 function addBookToLibrary() {
     let title = prompt("Title: ");
@@ -44,6 +36,14 @@ function addBookToLibrary() {
     myLibrary.push(newBook);
 }
 addBookToLibrary();
+
+function displayBooks() {
+    for (i = 0; i < myLibrary.length; i++) {
+        console.log(myLibrary[i].info());
+        myCards[i].textContent = "Book: " + myLibrary[i].info();
+    }
+}
+displayBooks();
 
 console.log(myLibrary);
 
