@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Library</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
@@ -23,6 +23,30 @@
         </div>
         <div class="card5 card">
             
+        </div>
+
+        <div id="popup-overlay" class="overlay-container">
+            <div class="popup-box">
+                <form action="" method="post">
+                    <input type="text" id="title" name="title" placeholder="Title">
+
+                    <input type="text" id="author" name="author" placeholder="Author">
+
+                    <input type="number" id="pages" name="pages" placeholder="Number of Pages">
+
+                    <label for="read">Have you read this book?</label>
+                    <select name="read" id="read">
+                        <option value="yes" selected>Yes</option>
+                        <option value="no">Not yet</option>
+                    </select>
+
+                    <div>
+                        <button type="button" class="btn-close-popup" onclick="togglePopup()">Cancel</button>
+                        <button type="submit" class="btn-submit">Submit</button>
+                    </div>
+                    
+                </form>
+            </div>
         </div>
     </div>
 </body>
