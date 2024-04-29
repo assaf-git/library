@@ -4,26 +4,26 @@ const myLibrary = [];
 const nodeList = document.querySelectorAll(".card");
 const myCards = Array.from(nodeList);
 
+// const cardContainer = document.querySelector(".card-container")
 const addBook = document.querySelector(".btn-add-book");
 const formDialog = document.querySelector("#form-dialog");
+// const formContainer = document.querySelector(".form-container");
 const submitBtn = document.querySelector(".btn-submit");
-// const formTitle = formDialog.querySelector("#title");
-// const formAuthor = formDialog.querySelector("#author");
-// const formPages  = formDialog.querySelector("#pages")
-// const formRead = formDialog.querySelector("#read");
+const formTitle = document.querySelector("#title");
+const formAuthor = document.querySelector("#author");
+const formPages  = document.querySelector("#pages");
+const formRead = document.querySelector("#read");
 
-// const overlay = document.querySelector('.overlay-container');
-// function togglePopup() {
-//     overlay.classList.toggle('show')
-// }
 
 addBook.addEventListener('click', () => {
+    // formContainer.reset();
     formDialog.showModal();
 });
 
 submitBtn.addEventListener('click', (event) => {
-event.preventDefault();
-formDialog.close();
+    addBookToLibrary();
+    event.preventDefault();
+    formDialog.close();
 });
 
 const book1 = new Book("Zero To One", "Peter Thiel", "295", "Read");
@@ -48,11 +48,11 @@ function Book(title, author, numberOfPages, read) {
 
 
 function addBookToLibrary() {
-    let title = prompt("Title: ");
-    let author = prompt("Author: ");
-    let numberOfPages = prompt("Number of pages: ");
-    let answer = prompt("Have you read this book?", "Yes");
-    if (answer == "Yes") {
+    let title = formTitle.value;
+    let author = formAuthor.value;
+    let numberOfPages = formPages.value;
+    let answer = formRead.value;
+    if (answer == "yes") {
         read = 'Read';
     } else {
         read = 'Not yet read';
@@ -60,8 +60,8 @@ function addBookToLibrary() {
     const newBook = new Book(title, author, numberOfPages, read);
     console.log(newBook.info());
     myLibrary.push(newBook);
+    displayBooks();
 }
-// addBookToLibrary();
 
 
 function displayBooks() {
