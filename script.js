@@ -4,6 +4,27 @@ const myLibrary = [];
 const nodeList = document.querySelectorAll(".card");
 const myCards = Array.from(nodeList);
 
+const addBook = document.querySelector(".btn-add-book");
+const formDialog = document.querySelector("#form-dialog");
+const submitBtn = document.querySelector(".btn-submit");
+// const formTitle = formDialog.querySelector("#title");
+// const formAuthor = formDialog.querySelector("#author");
+// const formPages  = formDialog.querySelector("#pages")
+// const formRead = formDialog.querySelector("#read");
+
+// const overlay = document.querySelector('.overlay-container');
+// function togglePopup() {
+//     overlay.classList.toggle('show')
+// }
+
+addBook.addEventListener('click', () => {
+    formDialog.showModal();
+});
+
+submitBtn.addEventListener('click', (event) => {
+event.preventDefault();
+formDialog.close();
+});
 
 const book1 = new Book("Zero To One", "Peter Thiel", "295", "Read");
 myLibrary.push(book1);
@@ -40,7 +61,7 @@ function addBookToLibrary() {
     console.log(newBook.info());
     myLibrary.push(newBook);
 }
-addBookToLibrary();
+// addBookToLibrary();
 
 
 function displayBooks() {
