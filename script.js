@@ -7,7 +7,7 @@ const myCards = Array.from(nodeList);
 // const cardContainer = document.querySelector(".card-container")
 const addBook = document.querySelector(".btn-add-book");
 const formDialog = document.querySelector("#form-dialog");
-// const formContainer = document.querySelector(".form-container");
+const formContainer = document.querySelector(".form-container");
 const submitBtn = document.querySelector(".btn-submit");
 const formTitle = document.querySelector("#title");
 const formAuthor = document.querySelector("#author");
@@ -16,7 +16,7 @@ const formRead = document.querySelector("#read");
 
 
 addBook.addEventListener('click', () => {
-    // formContainer.reset();
+    formContainer.reset();
     formDialog.showModal();
 });
 
