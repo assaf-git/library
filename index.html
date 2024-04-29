@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container">
-        <button type="button" class="btn-open-popup" onclick="togglePopup()">Add Book</button>
+        <button type="button" class="btn-add-book">Add Book</button>
 
         <div class="card-container">
             <div class="card1 card">
@@ -29,29 +29,31 @@
             </div>
         </div>
         
-        <div id="popup-overlay" class="overlay-container">
-            <div class="popup-box">
-                <form action="" method="post" class="form-container">
-                    <input type="text" id="title" name="title" placeholder="Title">
-
-                    <input type="text" id="author" name="author" placeholder="Author">
-
-                    <input type="number" id="pages" name="pages" placeholder="Number of Pages">
-
-                    <label for="read">Have you read this book?</label>
-                    <select name="read" id="read">
-                        <option value="yes" selected>Yes</option>
-                        <option value="no">Not yet</option>
-                    </select>
-
-                    <div>
-                        <button type="button" class="btn-close-popup" onclick="togglePopup()">Cancel</button>
-                        <button type="submit" class="btn-submit">Submit</button>
-                    </div>
-                    
-                </form>
-            </div>
-        </div>
+        <dialog id="form-dialog">
+            <!-- <div id="popup-overlay" class="overlay-container"> -->
+                <div class="popup-box">
+                    <form action="" method="post" class="form-container">
+                        <input type="text" id="title" name="title" placeholder="Title">
+    
+                        <input type="text" id="author" name="author" placeholder="Author">
+    
+                        <input type="number" id="pages" name="pages" placeholder="Number of Pages">
+    
+                        <label for="read">Have you read this book?</label>
+                        <select name="read" id="read">
+                            <option value="yes" selected>Yes</option>
+                            <option value="no">Not yet</option>
+                        </select>
+    
+                        <div>
+                            <button type="button" value="cancel" formmethod="dialog" class="btn-close-popup">Cancel</button>
+                            <button type="submit" class="btn-submit">Submit</button>
+                        </div>
+                        
+                    </form>
+                </div>        
+            <!-- </div> -->
+        </dialog>
     </div>
 </body>
 </html>
