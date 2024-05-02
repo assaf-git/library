@@ -77,9 +77,20 @@ function displayBooks() {
 
 // makes new card and displays book
 function makeCard() {
-    newCard = document.createElement("div");
-    cardContainer.appendChild(newCard).className = "card";
+    const newCard = document.createElement("div");
+    const removeBtn = document.createElement("button");
+    removeBtn.innerHTML = "Remove";
+    
     for (let book of myLibrary) {
         newCard.textContent = "Book: " + book.info();
+        // deleteBtn.textContent = "Delete";
+        // removeBtn.addEventListener('click', () => {
+        //     cardContainer.removeChild(newCard);
+        // })
     }
+    newCard.appendChild(removeBtn).className = "remove-button";
+    cardContainer.appendChild(newCard).className = "card";
+    console.log(removeBtn);
+    console.log(newCard)
+    console.log(newCard.className);
 }
