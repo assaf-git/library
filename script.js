@@ -83,7 +83,6 @@ function makeCard() {
     
     for (let book of myLibrary) {
         newCard.textContent = "Book: " + book.info();
-        deleteBtn.textContent = "Delete";
         removeBtn.addEventListener('click', () => {
             cardContainer.removeChild(newCard);
         })
