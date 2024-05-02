@@ -83,10 +83,10 @@ function makeCard() {
     
     for (let book of myLibrary) {
         newCard.textContent = "Book: " + book.info();
-        removeBtn.addEventListener('click', () => {
-            cardContainer.removeChild(newCard);
-        })
     }
+    removeBtn.addEventListener('click', () => {
+        cardContainer.removeChild(newCard);
+    })
     newCard.appendChild(removeBtn).className = "remove-button";
     cardContainer.appendChild(newCard).className = "card";
     console.log(removeBtn);
