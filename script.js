@@ -78,12 +78,17 @@ function displayBooks() {
 // makes new card and displays book
 function makeCard() {
     const newCard = document.createElement("div");
+    const cardTitle = document.createElement("h2");
+    const cardAuthor = document.createElement("p");
+    const cardNoOfPages = document.createElement("p");
     const readBtn = document.createElement("button");
     const removeBtn = document.createElement("button");
     removeBtn.innerHTML = "Remove";
     
     for (let book of myLibrary) {
-        newCard.textContent = "Book: " + book.info();
+        cardTitle.textContent = book.title;
+        cardAuthor.textContent = book.author;
+        cardNoOfPages.textContent = book.numberOfPages;
         readBtn.innerHTML = book.read;
     }
     readBtn.addEventListener('click', () => {
@@ -100,10 +105,10 @@ function makeCard() {
     removeBtn.addEventListener('click', () => {
         cardContainer.removeChild(newCard);
     })
+    newCard.appendChild(cardTitle).className = "card-title";
+    newCard.appendChild(cardAuthor).className = "card-author";
+    newCard.appendChild(cardNoOfPages).className = "card-nop";
     newCard.appendChild(readBtn).className = "read-button";
     newCard.appendChild(removeBtn).className = "remove-button";
     cardContainer.appendChild(newCard).className = "card";
-    console.log(removeBtn);
-    console.log(newCard)
-    console.log(newCard.className);
 }
