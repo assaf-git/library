@@ -78,7 +78,9 @@ function displayBooks() {
 // makes new card and displays book
 function makeCard() {
     const newCard = document.createElement("div");
+    const readBtn = document.createElement("button");
     const removeBtn = document.createElement("button");
+    readBtn.innerHTML = "Read";
     removeBtn.innerHTML = "Remove";
     
     for (let book of myLibrary) {
@@ -87,6 +89,7 @@ function makeCard() {
     removeBtn.addEventListener('click', () => {
         cardContainer.removeChild(newCard);
     })
+    newCard.appendChild(readBtn).className = "read-button";
     newCard.appendChild(removeBtn).className = "remove-button";
     cardContainer.appendChild(newCard).className = "card";
     console.log(removeBtn);
