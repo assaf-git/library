@@ -86,6 +86,17 @@ function makeCard() {
         newCard.textContent = "Book: " + book.info();
         readBtn.innerHTML = book.read;
     }
+    readBtn.addEventListener('click', () => {
+        for (let book of myLibrary) {
+            if (book.read == "Read") {
+                readBtn.innerHTML = "Not yet read";
+                book.read = "Not yet read";
+            } else if (book.read == "Not yet read") {
+                readBtn.innerHTML = "Read";
+                book.read = "Read";
+            }
+        }
+    })
     removeBtn.addEventListener('click', () => {
         cardContainer.removeChild(newCard);
     })
