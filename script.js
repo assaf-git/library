@@ -80,11 +80,11 @@ function makeCard() {
     const newCard = document.createElement("div");
     const readBtn = document.createElement("button");
     const removeBtn = document.createElement("button");
-    readBtn.innerHTML = "Read";
     removeBtn.innerHTML = "Remove";
     
     for (let book of myLibrary) {
         newCard.textContent = "Book: " + book.info();
+        readBtn.innerHTML = book.read;
     }
     removeBtn.addEventListener('click', () => {
         cardContainer.removeChild(newCard);
