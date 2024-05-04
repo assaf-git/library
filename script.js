@@ -21,6 +21,10 @@ submitBtn.addEventListener('click', (event) => {
     formDialog.close();
 });
 
+formDialog.addEventListener('click', () => formDialog.close());
+
+formContainer.addEventListener('click', (event) => event.stopPropagation());
+
 // new book object constructor
 function Book(title, author, numberOfPages, read) {
     this.title = title;
