@@ -11,6 +11,20 @@
     left: 50%; */
 }
 
+.library-header {
+    font-size: 22px;
+    padding: 15px;
+    box-shadow: 0px 5px 10px 0px #E0E0E0;
+}
+
+.library-container {
+    margin-top: 25px;
+}
+
+.btn-add-book {
+    
+}
+
 .card-container {
     height: 700px;
     width: 100%;
@@ -35,8 +49,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 33%;
-    left: 42%;
+    top: 30%;
+    left: 39%;
     /* height: 33%; */
     width: 20%;
 
