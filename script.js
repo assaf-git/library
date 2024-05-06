@@ -68,9 +68,9 @@ function makeCard() {
     removeBtn.innerHTML = "Remove";
     
     for (let book of myLibrary) {
-        cardTitle.textContent = book.title;
-        cardAuthor.textContent = book.author;
-        cardNoOfPages.textContent = book.numberOfPages;
+        cardTitle.textContent = `'${book.title}'`;
+        cardAuthor.textContent = "Written by: " + book.author;
+        cardNoOfPages.textContent = "Pages: " + book.numberOfPages;
         readBtn.innerHTML = book.read;
     }
 
@@ -90,10 +90,10 @@ function makeCard() {
         cardContainer.removeChild(newCard);
     })
 
-    newCard.appendChild(cardTitle).className = "card-title";
-    newCard.appendChild(cardAuthor).className = "card-author";
-    newCard.appendChild(cardNoOfPages).className = "card-nop";
-    newCard.appendChild(readBtn).className = "read-button";
-    newCard.appendChild(removeBtn).className = "remove-button";
+    newCard.appendChild(cardTitle).className = "card-title card-elements";
+    newCard.appendChild(cardAuthor).className = "card-author card-elements";
+    newCard.appendChild(cardNoOfPages).className = "card-nop card-elements";
+    newCard.appendChild(readBtn).className = "read-button card-buttons";
+    newCard.appendChild(removeBtn).className = "remove-button card-buttons";
     cardContainer.appendChild(newCard).className = "card";
 }
