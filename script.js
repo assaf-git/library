@@ -72,14 +72,21 @@ function makeCard() {
         cardAuthor.textContent = "Written by: " + book.author;
         cardNoOfPages.textContent = "Pages: " + book.numberOfPages;
         readBtn.innerHTML = book.read;
+        if (book.read == "Read") {
+            readBtn.style.background = '#94ff93';
+        } else if (book.read == "Not yet read") {
+            readBtn.style.background = '#fd9090';
+        }
     }
 
     readBtn.addEventListener('click', () => {
         for (let book of myLibrary) {
             if (book.read == "Read") {
+                readBtn.style.background = '#fd9090';
                 readBtn.innerHTML = "Not yet read";
                 book.read = "Not yet read";
             } else if (book.read == "Not yet read") {
+                readBtn.style.background = '#94ff93';
                 readBtn.innerHTML = "Read";
                 book.read = "Read";
             }
