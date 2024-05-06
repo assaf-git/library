@@ -46,9 +46,15 @@
     font-family: 'Times New Roman', Times, serif;
     margin-bottom: 25px;
     padding: 5px 10px;
+    border: 1px solid;
     border-radius: 6px;
-    background: #FFFBFB;
+    background: #efefef;
 }
+
+.btn-add-book:hover {
+    background: #dedede;
+    transition: 0.3s;
+} 
 
 .card-container {
     /* height: 100%;
@@ -92,7 +98,6 @@
 }
 
 .card-buttons {
-    /* background: rgb(75, 223, 75); */
     width: 90%;
     margin: 10px;
     padding: 4px;
@@ -100,6 +105,20 @@
     font-family: 'Times New Roman', Times, serif; /* should this be universal */
     border: 1px solid;
     border-radius: 4px;
+}
+
+.remove-button {
+    background: #efefef;
+} 
+
+.remove-button:hover {
+    background: #dedede;
+    transition: 0.3s;
+} 
+
+.read-button:hover {
+    filter: brightness(90%);
+    transition: 0.3s;
 }
 
 #form-dialog {
