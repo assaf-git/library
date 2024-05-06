@@ -31,9 +31,6 @@ function Book(title, author, numberOfPages, read) {
     this.author = author;
     this.numberOfPages = numberOfPages;
     this.read = read;
-    // this.info = function() {
-    //     return title + ', ' + author + ', ' + numberOfPages + ', ' + read;
-    // }    
 }
 
 // assigns values from form to respective variables
@@ -50,13 +47,13 @@ function addBookToLibrary() {
         read = 'Not yet read';
     }
     newBook = new Book(title, author, numberOfPages, read);
-    // console.log(newBook.info());
     myLibrary.push(newBook);
     makeCard();
 }
 
 // makes new card and displays book
-// toggles book read status
+// toggles book's read status
+// changes color of read status button
 // enables book card to be removed
 function makeCard() {
     const newCard = document.createElement("div");
