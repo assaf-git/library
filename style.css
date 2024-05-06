@@ -19,10 +19,16 @@
 
 .library-container {
     margin-top: 25px;
+    /* background: #efefef; */
 }
 
 .btn-add-book {
-    
+    font-size: 22px;
+    font-weight: 500;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 25px;
+    padding: 5px 10px;
+    border-radius: 6px;
 }
 
 .card-container {
