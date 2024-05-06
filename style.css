@@ -105,14 +105,14 @@
 #form-dialog {
     background-color: #F6F7F8;
     border: 1px solid #D6D9DC;
-    border-radius: 3px;
+    border-radius: 4px;
     display: flex;
     justify-content: center;
     align-items: center;
     top: 30%;
     left: 39%;
-    /* height: 33%; */
-    width: 20%;
+    height: 44%;
+    width: 24%;
 
     /* width: 100%; */
     /* padding: 50px; */
@@ -123,6 +123,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .form-header {
+    font-size: 1.2rem;
+    font-weight: 600;
   }
 
   input, 
