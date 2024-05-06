@@ -63,7 +63,7 @@
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));;
     /* grid-template-rows: repeat(2, 1fr); */
     grid-auto-flow: row;
-    gap: 10px;
+    gap: 15px;
 }
 
 .card {
@@ -72,6 +72,34 @@
     border: 1px solid black;
     border-radius: 4px;
     background: #FFFBFB;
+}
+
+.card-title {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.card-author {
+    font-size: 1.3rem;
+}
+
+.card-nop {
+    font-size: 1.3rem;
+}
+
+.card-elements {
+    padding: 2px;
+}
+
+.card-buttons {
+    /* background: rgb(75, 223, 75); */
+    width: 90%;
+    margin: 10px;
+    padding: 4px;
+    font-size: 1.5rem;
+    font-family: 'Times New Roman', Times, serif; /* should this be universal */
+    border: 1px solid;
+    border-radius: 4px;
 }
 
 #form-dialog {
