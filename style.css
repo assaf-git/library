@@ -14,12 +14,15 @@
 .library-header {
     font-size: 22px;
     padding: 15px;
-    box-shadow: 0px 5px 10px 0px #E0E0E0;
+    background: #FFFBFB;
+    box-shadow: 0px 1px 15px 0px #c1c1c1;
 }
 
 .library-container {
-    margin-top: 25px;
-    /* background: #efefef; */
+    position: relative;
+    top: 5px;
+    padding-top: 25px;
+    background: #f0eef1;
 }
 
 .btn-add-book {
@@ -29,6 +32,7 @@
     margin-bottom: 25px;
     padding: 5px 10px;
     border-radius: 6px;
+    background: #FFFBFB;
 }
 
 .card-container {
