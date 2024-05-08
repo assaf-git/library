@@ -1,25 +1,12 @@
-/* clean up stylesheet */
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
-    /* padding: 5px 10px 5px 3px; */
 }
 
-/* body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-} */
-
 .container {
-    /* height: 100%; */
     text-align: center;
-    /* position: absolute;
-    top: 50%;
-    left: 50%; */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -46,7 +33,6 @@
 .btn-add-book {
     font-size: 1.6rem;
     font-weight: 500;
-    /* font-family: 'Times New Roman', Times, serif; */
     margin-bottom: 25px;
     padding: 5px 10px;
     border: 1px solid;
@@ -60,16 +46,10 @@
 } 
 
 .card-container {
-    /* height: 100%;
-    width: 75%;
-    margin: auto; */
     width: min(90vw, 1200px);
     padding: 30px;
     display: grid;
-    /* align-items: center;
-    justify-content: center; */
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));;
-    /* grid-template-rows: repeat(2, 1fr); */
     grid-auto-flow: row;
     gap: 15px;
 }
@@ -104,7 +84,6 @@
     margin: 10px;
     padding: 4px;
     font-size: 1.5rem;
-    /* font-family: 'Times New Roman', Times, serif; should this be universal */
     border: 1px solid;
     border-radius: 4px;
 }
@@ -134,10 +113,6 @@
     left: 39%;
     height: 44%;
     width: 24%;
-
-    /* width: 100%; */
-    /* padding: 50px; */
-    /* margin: 0 0 40px 0; */
   }
 
   .form-container {
