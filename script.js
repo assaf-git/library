@@ -38,19 +38,31 @@ class Book {
 // assigns values from form to respective variables
 // creates a new book object from those values
 // pushes that new book object into myLibrary array
-function addBookToLibrary() {
-    let title = formTitle.value;
-    let author = formAuthor.value;
-    let numberOfPages = formPages.value;
-    let answer = formRead.value;
-    if (answer == "yes") {
-        read = 'Read';
-    } else {
-        read = 'Not yet read';
+class AddBookToLibrary {
+    constructor() {
+        title = formTitle.value;
+        author = formAuthor.value;
+        numberOfPages = formPages.value;
+        answer = formRead.value;
     }
+    
+    readNotRead() {
+        if (this.answer == "yes") {
+            read = 'Read';
+        } else {
+            read = 'Not yet read';
+        }
+    }
+    
     newBook = new Book(title, author, numberOfPages, read);
-    myLibrary.push(newBook);
-    makeCard();
+    
+    addNewBook() {
+        myLibrary.push(newBook);
+    }
+
+    makeCardMethod() {
+        makeCard();
+    }
 }
 
 // makes new card and displays book
