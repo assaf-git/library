@@ -26,11 +26,13 @@ formDialog.addEventListener('click', () => formDialog.close());
 formContainer.addEventListener('click', (event) => event.stopPropagation());
 
 // new book object constructor
-function Book(title, author, numberOfPages, read) {
-    this.title = title;
-    this.author = author;
-    this.numberOfPages = numberOfPages;
-    this.read = read;
+class Book {
+    constructor(title, author, numberOfPages, read) {
+        this.title = title;
+        this.author = author;
+        this.numberOfPages = numberOfPages;
+        this.read = read;
+    }
 }
 
 // assigns values from form to respective variables
